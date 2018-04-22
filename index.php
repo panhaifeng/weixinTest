@@ -1,11 +1,12 @@
 <?php
 
-/*$wechatObj = new IndexController();
-$wechatObj->responseMsg();*/
+$wechatObj = new IndexController();
+$wechatObj->index();
 class IndexController extends Controller {
+   
     public function index(){
-         $type = $_SERVER['REQUEST_METHOD'];
-           if(isset($_GET['signature'])){
+        $type = $_SERVER['REQUEST_METHOD'];
+        if(isset($_GET['signature'])){
               $signature = $_GET["signature"];//从用户端获取签名赋予变量signature11
         $timestamp = $_GET["timestamp"];//从用户端获取时间戳赋予变量timestamp
         $nonce = $_GET["nonce"];    //从用户端获取随机数赋予变量nonce
