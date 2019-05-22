@@ -11,7 +11,7 @@ class IndexController extends Controller {
         $timestamp = $_GET["timestamp"];//从用户端获取时间戳赋予变量timestamp
         $nonce = $_GET["nonce"];    //从用户端获取随机数赋予变量nonce
 
-        $token ='YoonPer';//将常量token赋予变量token
+        $token ='hhh';//将常量token赋予变量token
         $tmpArr = array($token, $timestamp, $nonce);//简历数组变量tmpArr
         sort($tmpArr, SORT_STRING);//新建排序
         $tmpStr = implode( $tmpArr );//字典排序
